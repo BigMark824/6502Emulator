@@ -3,7 +3,7 @@
 #include <memoryHandler.h>
 #include <cpuHandler.h>
 #include <stdint.h>
-
+#include <stdlib.h>
 typedef uint8_t byte;
 
 int main() {
@@ -37,11 +37,10 @@ int main() {
         mem[i] = 0;
     }
 
-    mem[0x8000] = 0x4A;
-    printf("Values in memory:\n");
-    printf("Values in memory from address 0x0000 to 0x8000:\n");
-    for (int addr = 0x0000; addr <= 0x8000; addr++) {
-        printf("Address 0x%04X: %u\n", addr, mem[addr]);
+    FILE *assemblyFile = fopen("test.asm", "r");
+    if (assemblyFile == NULL) {
+        perror("Error opening file");
+        return EXIT_FAILURE;
     }
 
     return 0; 
