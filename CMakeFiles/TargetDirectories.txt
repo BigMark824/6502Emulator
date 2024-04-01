@@ -1,0 +1,3 @@
+C:/Users/James/Desktop/Development/6502Emulator/CMakeFiles/6502.dir
+C:/Users/James/Desktop/Development/6502Emulator/CMakeFiles/edit_cache.dir
+C:/Users/James/Desktop/Development/6502Emulator/CMakeFiles/rebuild_cache.dir
