@@ -24,36 +24,6 @@ struct instruction_set
     uint8_t value;
 };
 
-void CPU(struct instruction_set instSet)
-{
-    struct registers reg;
-    switch (instSet.type)
-    {
-    case LDA:
-        reg.A = instSet.value;
-        break;
-    case STA:
-        mem[instSet.value] = reg.A;
-        break;
-    case LDX:
-        reg.X = instSet.value;
-        break;
-    case STX:
-        mem[instSet.value] = reg.X;
-        break;
-    case ADC:
-        reg.A =+ instSet.value;
-        break;
-    case LDY:
-        reg.Y = instSet.value;
-        break;
-    case STY:
-        mem[instSet.value] = reg.Y;
-        break;
-    case NOP:
-        break;
-    }
+void CPU(struct instruction_set instSet);
 
-}
-
-#endif
+#endif 

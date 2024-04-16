@@ -1,3 +1,6 @@
+#ifndef CPU_HANDLER_H
+#define CPU_HANDLER_H
+
 #include <stdio.h>
 #include <stdint.h>
 
@@ -9,6 +12,7 @@ struct registers
     uint8_t SP;
     uint16_t PC;
 };
+
 struct flags
 {
     uint8_t C : 1;
@@ -18,3 +22,5 @@ struct flags
     uint8_t N : 1;
     uint8_t B : 1;
 };
+
+#endif
